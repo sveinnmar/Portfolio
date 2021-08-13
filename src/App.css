@@ -1,14 +1,15 @@
 * {
+  background: linear-gradient(90deg, rgb(27, 41, 64) 0%, rgb(25, 19, 19) 100%);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
 
-.about,
-.portfolio,
-.contact,
-.signUp {
+.aef,
+.aefeaf,
+.aefasfa,
+.aefasfaef {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -16,7 +17,7 @@
   font-size: 3rem;
 }
 
-.about {
+.aef {
   /*background-image: url('/images/img-2.jpg');*/
   background-position: center;
   background-size: cover;
@@ -25,7 +26,7 @@
   font-size: 100px;
 }
 
-.portfolio {
+.aefeaf {
   /*background-image: url('/images/img-2.jpg');*/
   background-position: center;
   background-size: cover;
@@ -34,7 +35,7 @@
   font-size: 100px;
 }
 
-.contact {
+.aefasfa {
   /*background-image: url('/images/img-1.jpg');*/
   background-position: center;
   background-size: fill;
@@ -43,7 +44,7 @@
   font-size: 100px;
 }
 
-.signUp {
+.aefasfaef {
   /*background-image: url('/images/img-8.jpg');*/
   background-position: center;
   background-size: cover;
