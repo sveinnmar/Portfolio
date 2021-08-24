@@ -1,0 +1,239 @@
+:root {
+    --about-background-color:#F6F6F4;
+    --about-default-text-color: #1C121C;
+    --about-reveal-color-pinkish: #A14D64;
+    --about-reveal-color-yellow: yellow;
+}
+
+.aboutContainer {
+    background: var(--about-background-color);
+    color: var(--about-default-text-color);
+}
+
+.imageAndSkills {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10rem 0;
+}
+
+.aboutImages {
+    /* width: auto; */
+    text-align:center;
+    padding: 20px;
+    /* margin-left: 28rem; */
+    margin-left: 18%;
+}
+
+.aboutTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-left: 14%;
+}
+
+.withBorder {
+    /* height: 35rem; */
+    border: 1px solid #dadada;
+    border-radius: 6px;
+    padding: 2rem;
+}
+
+.revealHolder .hide {
+    display: none;
+}
+
+.aboutAndEducationMain h1 {
+    font-size: calc(var(--h1-font-size) * 0.8);
+    padding: 0.5rem;
+    background: var(--about-reveal-color-pinkish);
+    color: var(--about-background-color);
+    font-weight: 500;
+}
+
+.aboutAndEducationMain p {
+    font-size: calc(var(--p-font-size) * 0.85);
+}
+
+.seeMoreOrLess {
+    display: block;
+    font-size: calc(var(--p-font-size) * 0.5);
+    /* font-size: 10px; */
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.seeMoreOrLess:hover {
+    animation: hover 0.3s forwards;
+}
+
+.aboutAndEducationMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+.educationAndWorkContainer {
+    margin-right: 18%;
+}
+
+.aboutTextContainer, .educationAndWorkContainer {
+    max-width: 20%;
+}
+
+.skillChartContainer {
+    margin-right: 18%;
+}
+
+.beforeHeaderText.about:before {
+    background-color: var(--about-default-text-color) !important;
+}
+
+/* Top Section split ----------------- */
+
+.aboutTopSectionSplit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.aboutTopSectionSplit svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.aboutTopSectionSplit .shape-fill {
+    fill: var(--main-background-color);
+}
+
+/* RevealingText resetting colors ----- */
+.revealBlock.h1 {
+    background: var(--about-background-color);
+}
+
+.revealBlock.h1:before {
+    background: #7F81A2;
+}
+
+.revealBlock.work {
+    background: var(--about-background-color);
+}
+
+.revealBlock.work:before {
+    background: var(--main-background-color);
+}
+
+/* Keyframes ------------ */
+
+@keyframes fadeout {
+    from {opacity: 1}
+    to {opacity: 1}
+}
+
+@keyframes hover {
+    from {color: var(--about-default-text-color)}
+    to {color: var(--about-reveal-color-pinkish)}
+}
+
+@media (max-width: 1200px) {
+    .imageAndSkills {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* margin: 10rem 0; */
+    }
+
+    .aboutAndEducationMain {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aboutImages, .skillChartContainer, .aboutTextContainer, .educationAndWorkContainer {
+        margin: 0;
+        margin-top: 10rem;
+    }
+
+    .educationAndWorkContainer, .aboutTextContainer {
+        margin-top: 5rem;
+        transform: scale(0.9);
+    }
+
+    .aboutTextContainer, .educationAndWorkContainer {
+        max-width: 35rem;
+    }
+}
+
+@media (max-width: 615px) {
+    .skillChartContainer .skill-bars {
+        transform: scale(0.9);
+    }
+
+    .aboutImages, .skillChartContainer, .aboutTextContainer, .educationAndWorkContainer {
+        margin-top: 9rem;
+    }
+}
+
+@media (max-width: 515px) {
+    .skillChartContainer .skill-bars {
+        transform: scale(0.8);
+    }
+
+    .aboutImages, .skillChartContainer, .aboutTextContainer, .educationAndWorkContainer {
+        margin-top: 8rem;
+    }
+}
+
+@media (max-width: 445px) {
+    .skillChartContainer .skill-bars {
+        transform: scale(0.7);
+    }
+
+    .aboutImages, .skillChartContainer, .aboutTextContainer, .educationAndWorkContainer {
+        margin-top: 7rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .skillChartContainer .skill-bars {
+        transform: scale(0.6);
+    }
+
+    .imageOfMe {
+        transform: scale(0.8);
+    }
+
+    .aboutImages, .skillChartContainer, .aboutTextContainer, .educationAndWorkContainer {
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 340px) {
+    .skillChartContainer .skill-bars {
+        transform: scale(0.55);
+    }
+
+    .imageOfMe {
+        transform: scale(0.7);
+    }
+
+    .aboutImages, .skillChartContainer, .aboutTextContainer, .educationAndWorkContainer {
+        margin-top: 0;
+        /* padding: 0 */
+    }
+}

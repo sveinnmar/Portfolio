@@ -1,0 +1,151 @@
+:root {
+    --big-width: 34rem;
+}
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75rem ;
+    color: #999;
+    top: -0.9rem;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styledInput {
+    margin: 1rem 0;
+    position: relative;
+}
+
+.styledInput label {
+    color: #999;
+    padding: 1.3rem 1.5rem 1rem 1.5rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styledInput.phoneNumber, .styledInput.email {
+    width: calc(var(--big-width)/2);
+}
+
+input, textarea {
+    padding: 1.8rem;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 1rem;
+}
+
+input:focus, textarea:focus { outline: 0; }
+
+input:focus ~ span, textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContainer div:not(:last-child) {
+    width: var(--big-width);
+}
+
+.twoInRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer {
+    position: relative;
+    width: var(--big-width);
+}
+
+.sendButton {
+    position: absolute;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    background-color: #A14D64;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
+              0 2px 10px 0 rgba(0,0,0,0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.sendButton:hover {
+    transform: translateY(2px);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
+              0 1px 1px 0 rgba(0,0,0,0.09);
+}
+
+@media (max-width: 710px){
+    .inputContainer div:not(:last-child) {
+        width: calc(var(--big-width) * 0.95);
+    }
+
+    .styledInput.phoneNumber, .styledInput.email {
+        width: calc((var(--big-width)/2) * 0.95);
+    }
+}
+
+@media (max-width: 640px){
+    .inputContainer div:not(:last-child) {
+        width: calc(var(--big-width) * 0.9);
+    }
+
+    .styledInput.phoneNumber, .styledInput.email {
+        width: calc((var(--big-width)/2) * 0.9);
+    }
+}
+
+@media (max-width: 558px){
+    .inputContainer div:not(:last-child) {
+        width: calc(var(--big-width) * 0.85);
+    }
+
+    .styledInput.phoneNumber, .styledInput.email {
+        width: calc((var(--big-width)/2) * 0.85);
+    }
+}
+
+@media (max-width: 434px){
+    .inputContainer div:not(:last-child) {
+        width: calc(var(--big-width) * 0.75);
+    }
+
+    .styledInput.phoneNumber, .styledInput.email {
+        width: calc((var(--big-width)/2) * 0.75);
+    }
+}
+
+@media (max-width: 354px){
+    .inputContainer div:not(:last-child) {
+        width: calc(var(--big-width) * 0.5);
+    }
+
+    .styledInput.phoneNumber, .styledInput.email {
+        width: calc((var(--big-width)/2) * 0.5);
+    }
+}

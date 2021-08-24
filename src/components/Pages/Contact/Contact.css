@@ -1,0 +1,20 @@
+:root {
+    --contact-background-color: var(--main-background-color);
+    --contact-default-text-color:  #F6F6F4;
+    --contact-reveal-color-pinkish: #A14D64;
+}
+
+.contactContainer {
+    /* background: var(--portfolio-background-color); */
+    color: var(--frontpage-default-text-color);
+
+    padding-bottom: 40rem;
+}
+
+.beforeHeaderText.contact:before {
+    background-color: var(--contact-default-text-color) !important;
+}
+
+.contactHeaderTextContainer {
+    margin-bottom: 5rem;
+}

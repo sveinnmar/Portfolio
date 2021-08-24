@@ -1,0 +1,66 @@
+/* Remember to set following values in the css you are using this in:
+    --- This should be set to your background color for simple transition
+    .revealBlock {
+        background: ...; 
+    }
+
+    --- This is the "real" reveal color
+    .revealBlock:before {
+        background: ...;
+    }
+*/
+
+
+.revealHolder {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .revealBlock {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 101%;
+  }
+
+  .revealBlock::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition-property: transform;
+    transition-duration: 0.5s;
+  }
+
+  .revealBlock.right::before {
+    transform: scaleX(0);
+    transform-origin: 0% 100%;
+  }
+
+  .revealBlock.right.aos-animate::before {
+    transform: scaleX(1);
+  }
+
+  [data-aos="reveal-right"] {
+    transform: scaleX(1);
+    transform-origin: 100% 0%;
+    transition-property: transform;
+    transition-delay: 0.4s;
+  }
+
+  [data-aos="reveal-right"].aos-animate {
+    transform: scaleX(0);
+  }
+
+  [data-aos="reveal-item"] {
+    visibility: hidden;
+    transition-property: visibility;
+    transition-duration: 0s;
+  }
+  
+  [data-aos="reveal-item"].aos-animate {
+    visibility: visible;
+  }

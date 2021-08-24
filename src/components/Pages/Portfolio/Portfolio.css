@@ -1,0 +1,49 @@
+:root {
+    --portfolio-background-color:#EFF1E5;
+    --portfolio-default-text-color: #1C121C;
+    --portfolio-reveal-color-pinkish: #A14D64;
+    --portfolio-reveal-color-yellow: yellow;
+}
+
+.portfolioContainer {
+    background: var(--portfolio-background-color);
+    color: var(--portfolio-default-text-color);
+
+    padding-bottom: 40rem;
+    /* width: 100%; */
+}
+
+.worksContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10rem;
+}
+
+.worksContainer p {
+    margin-bottom: 5rem;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 60%;
+}
+
+.cardsContainer .card {
+    margin: 2rem 1rem;
+}
+
+.honest {
+    padding: 0 4rem;
+}
+
+.beforeHeaderText.portfolio:before {
+    background-color: var(--portfolio-default-text-color) !important;
+}

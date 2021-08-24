@@ -1,54 +1,90 @@
-* {
-  background: linear-gradient(90deg, rgb(27, 41, 64) 0%, rgb(25, 19, 19) 100%);
-  box-sizing: border-box;
+:root {
+  --h1-font-size: 3rem;
+  --p-font-size: 1.3rem;
+  --main-background-color: #1c2237;
+}
+
+html, body {
+  background: var(--main-background-color);
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
-.aef,
-.aefeaf,
-.aefasfa,
-.aefasfaef {
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+p {
+  font-size: var(--p-font-size);
+}
+
+section {
+  position: relative;
+}
+
+.glow {
+  box-shadow: 10px 8px 6px -6px black, -10px 8px 6px -6px black;
+}
+
+.mainContainer {
+  width: 95%;
+   
   display: flex;
-  height: 90vh;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+
+  margin: 0 auto;
 }
 
-.aef {
-  /*background-image: url('/images/img-2.jpg');*/
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.headerTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  hyphens: auto;
 }
 
-.aefeaf {
-  /*background-image: url('/images/img-2.jpg');*/
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.headerText h1 {
+  
+  text-transform: uppercase;
+  letter-spacing: 1rem;
 }
 
-.aefasfa {
-  /*background-image: url('/images/img-1.jpg');*/
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.beforeHeaderText {
+  margin-top: 10rem;
+  display: block;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 65px;
+  letter-spacing: 1px;
 }
 
-.aefasfaef {
-  /*background-image: url('/images/img-8.jpg');*/
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.beforeHeaderText:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 50px;
+  height: 1px;
+  background: #1C121C;
+  color: #1C121C /* Change this in the component using this */
 }
+
+.textBold {
+  font-weight: 700;
+}
+
+/* img {
+  max-width: 100%;
+  display: block;
+} */
